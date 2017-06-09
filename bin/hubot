@@ -1,0 +1,9 @@
+#!/bin/sh
+
+set -e
+
+npm install
+. $HOME/.hubotrc
+export PATH="node_modules/.bin:$PATH:node_modules/hubot/node_modules/.bin"
+
+exec node_modules/.bin/hubot "$@"
